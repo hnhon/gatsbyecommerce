@@ -19,9 +19,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <button className="nav-hamburger" onClick={toggleHamburger}>
-        <FaBars className="fabars" />
-      </button>
+      
       <ul className={`nav-ul ${hamburgerOpen ? "showLinks" : ""}`}>
         <li>
           <Link to="/" className="links">
@@ -41,6 +39,9 @@ export default function Navbar() {
           <span className="snipcart-items-count"></span>
         </span>
       </div>
+      <button className="nav-hamburger" onClick={toggleHamburger}>
+        <FaBars className="fabars" />
+      </button>
     </nav>
   );
 }

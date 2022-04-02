@@ -44,13 +44,15 @@ p {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: white;
-  height: 80px;
+  min-height: 80px;
+  height: 100px;
   box-shadow: 0 1px 1px 0 #eaeaea;
   width: 100%;
 }
@@ -111,19 +113,62 @@ nav .cart .snipcart-summary {
 @media only screen and (max-width: 767px) {
   nav .nav-hamburger {
     display: block;
-    order: 3;
-    cursor: pointer;
-    margin-left: 5px;
   }
+
   nav .nav-ul {
     display: none;
   }
 
   nav .nav-ul.showLinks {
-    display: block !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    z-index: 20;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 1px 1px 0 #eaeaea;
+  }
+  
+  nav .nav-ul.showLinks .links {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+  }
+
+  /* nav {
+
+    flex-direction: column;
+    position: relative;
+
+  }
+  nav .nav-hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin-right: 0;
+    border: 1px solid black;
+  }
+  nav .nav-ul {
+    display: block;
+  }
+
+  nav .cart {
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    cursor: pointer;
+  }
+
+  nav .nav-ul.showLinks {
+    display: block;
     order: 4;
     width: 100vw;
-    margin-top: 20px;
     text-align: right;
   }
 
@@ -133,7 +178,7 @@ nav .cart .snipcart-summary {
 
   nav .nav-ul.showLinks .links {
     font-size: 1rem;
-  }
+  } */
 }
 
 /* convertKit form control */
