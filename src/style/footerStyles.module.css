@@ -1,0 +1,77 @@
+.footerContainer {
+    max-width: 1170px;
+    /* margin: auto; */
+    padding: 0 1rem;
+
+}
+
+.footerContainer .row {
+    padding: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footerContainer .row .column {
+    width: 30%;
+    padding: 0;
+}
+
+.footerContainer .row .column ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footerContainer .row .column ul .links {
+    padding: 10px 0;
+    color: black;
+    font-weight: 200;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.footerContainer .row .column ul .links:hover {
+    color: rgb(0, 0, 0, 0.5);
+    position: relative;
+    left: 5px;
+}
+
+.footerContainer .row .column ul.sociallinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerContainer .row .column ul.sociallinks .links {
+    padding-right: 20px;
+}
+
+.footerContainer .row .column ul.sociallinks .links:hover {
+    position: relative;
+    left: 0px;
+}
+
+.footerContainer .row .column h4 {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.footerContainer .row .column h4::after {
+    content: '';
+    width: 80%;
+    height: 1px;
+    background-color: rgb(120, 94, 223);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .footerContainer .row .column {
+        width: 100%;
+    }
+    .footerContainer .row .column h4::after {
+        width: 100%;
+    }
+    
+}

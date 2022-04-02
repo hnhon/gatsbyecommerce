@@ -1,0 +1,40 @@
+.container {
+    margin-top: 20px;
+}
+
+.container .details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .details .img {
+    flex-basis: 60%;
+}
+
+.container .details .box {
+    max-width: 40%;
+
+}
+
+.container .details .box .productName {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container .details .box .description {
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .container .details {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .container .details .box {
+        max-width: 80%;
+    }
+}
