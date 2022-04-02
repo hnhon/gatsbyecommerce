@@ -41,7 +41,7 @@ export default function ProductCard() {
             </Link>
 
             <div className={`${styles.productinfo}`}>
-              <Link to={`/products/${data.node.slug}`}>
+              <Link className="links" to={`/products/${data.node.slug}`}>
                 <p className={styles.productName}>
                   {data.node.productName.productName}
                 </p>
