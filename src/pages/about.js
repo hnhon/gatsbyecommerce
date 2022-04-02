@@ -6,7 +6,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className={styles.main}>
-        This website is build with Gatsby
+        This website is built with Gatsby
       </div>
     </Layout>
     
