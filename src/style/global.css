@@ -119,6 +119,10 @@ nav .cart .snipcart-summary {
     display: none;
   }
 
+  nav .cart {
+    margin-right: 10px;
+  }
+
   nav .nav-ul.showLinks {
     display: flex;
     flex-direction: column;
