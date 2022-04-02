@@ -39,7 +39,8 @@
         flex-basis: 100%;
     }
     .productinfo {
+        width: 50%;
         margin-left: 50%;
-        transform: translateX(-25%);
+        transform: translateX(-50%);
     }
 }
