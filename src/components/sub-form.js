@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import * as styles from '../style/sub-form.module.css'
 
 const SubscriptionForm = () => {
     const [status, setStatus] = useState(null);
     const [email, setEmail] = useState('');
 
-    //FORM_URL should be the same as the form action url pointed out above
     const FORM_URL = `https://app.convertkit.com/forms/3128050/subscriptions`;
 
     const handleSubmit = async (e) => {
@@ -39,21 +39,22 @@ const SubscriptionForm = () => {
     }
 
     return (
-        <div className="sub">
-            <h2>Join My Newsletter</h2>
-            <p>
-               If you've found any of my articles useful, subscribe to receive more quality articles straight to your inbox.
+        <div className={styles.subContainer}>
+            <div className={styles.heading}>Join our mailing list.😍</div>
+            <p className={styles.content}>
+            Get our latest discounts by one click!.
             </p>
 
-            {status === 'SUCCESS' && <p>Please go confirm your subscription!</p>}
-            {status === 'ERROR' && <p>Oops, Something went wrong! try again.</p>}
+            {status === 'SUCCESS' && <p className={styles.submsg}>Success! Now check your email to confirm your subscription.</p>}
+            {status === 'ERROR' && <p className={styles.submsg}>Oops, Something went wrong! try again.</p>}
 
-            <form className="sub__form"
+            <form className={`${styles.subform} ${status === 'SUCCESS' ? styles.hide : '' }`}
                 action={FORM_URL}
                 method="post"
                 onSubmit={handleSubmit}
             >
                 <input
+                    className={styles.input}
                     type="email"
                     aria-label="Your email"
                    //The name attribute should be the same as on you selected form.
@@ -64,16 +65,10 @@ const SubscriptionForm = () => {
                     required
                 />
 
-                <button type="submit">
+                <button className={styles.button} type="submit">
                 Subscribe
                 </button>
-                    
-                
-
             </form>
-
-            <p className="sub__tag">I won't send you spam and you can unsubscribe at any time</p>
-
         </div>
     );
 };

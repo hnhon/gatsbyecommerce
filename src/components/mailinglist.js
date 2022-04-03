@@ -5,6 +5,9 @@ import * as styles from "../style/mailinglist.module.css";
 export default function Mailinglist() {
   const config = {
     formId: 3128050,
+    hideName: true,
+    submitText: "Jump on the train",
+    newTab: false,
   };
   return (
     <div>
