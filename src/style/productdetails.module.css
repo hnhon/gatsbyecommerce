@@ -9,6 +9,11 @@
 
 .container .details .img {
     flex-basis: 60%;
+    padding: 0 10px;
+}
+
+.gatsbyimg {
+    margin: 0 auto;
 }
 
 .container .details .box {

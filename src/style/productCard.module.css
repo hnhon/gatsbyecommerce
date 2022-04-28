@@ -11,7 +11,6 @@
     flex-direction: column;
     min-width: 280px;
     max-width: 500px;
-   
 }
 
 .product .productimg {
@@ -37,10 +36,11 @@
     }
     .product {
         flex-basis: 100%;
+        
     }
     .productinfo {
         width: 50%;
-        margin-left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
+
     }
 }
